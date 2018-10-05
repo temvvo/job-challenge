@@ -8,19 +8,26 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.Optional;
 
+//@RestController
+//@RequestMapping(value = "/bike")
 public class BikeController {
     private static final Logger logger = LoggerFactory.getLogger(BikeController.class);
 
     private BikeRepository bikeRepository;
 
+
+
     @Autowired
     public BikeController(BikeRepository bikeRepository){
         this.bikeRepository = bikeRepository;
     }
-    public Bike getBikeById(long id){
-        Optional<Bike> result = bikeRepository.findById(id);
-        return result.get();
-    }
+
+      // TODO: show filtered paged bikes to be selected in Front End
+    //@GetMapping("/showFiltered")
+    //public ResponseEntity showBikes(@RequestParam(defaultValue = "", required = false) String query,
+    //                                @RequestParam(defaultValue = "20", required = false) int pageSize,
+    //                                @RequestParam(defaultValue = "0", required = false) int page){}
+
 
 
 }

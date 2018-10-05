@@ -14,6 +14,8 @@ import java.time.Instant;
 import java.util.Date;
 import java.util.Optional;
 
+
+
 public class RentalItemController {
     private static final Logger logger = LoggerFactory.getLogger(RentalItemController.class);
 
@@ -24,8 +26,8 @@ public class RentalItemController {
     @Autowired
     public RentalItemController(
             RentalItemRepository rentalItemRepository, BikeRepository bikeRepository,
-            ClientRepository clientRepository
-            ){
+            ClientRepository clientRepository){
+
         this.rentalItemRepository = rentalItemRepository;
         this.clientRepository = clientRepository;
         this.bikeRepository = bikeRepository;
